@@ -1,0 +1,13 @@
+# Deferred Entity Commitment — requirements
+# Install with: pip install -r requirements.txt
+#
+# For GPU-compatible PyTorch, see https://pytorch.org/get-started/locally/
+# bitsandbytes is optional (only needed if USE_4BIT = True in model scripts)
+
+torch
+transformers
+pandas
+numpy
+matplotlib
+tqdm
+bitsandbytes

@@ -1,0 +1,5 @@
+model_name,num_layers,crossover_layer,crossover_pct_depth
+meta-llama/Llama-3.2-3B,28,18,0.643
+meta-llama/Meta-Llama-3-8B,32,18,0.562
+Qwen/Qwen2.5-3B,36,32,0.889
+microsoft/phi-2,32,24,0.75

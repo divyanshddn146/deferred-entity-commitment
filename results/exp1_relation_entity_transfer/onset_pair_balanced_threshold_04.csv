@@ -1,0 +1,5 @@
+model_name,threshold,relation_onset_pair_balanced,entity_onset_family_balanced,gap_entity_minus_relation,relation_before_entity
+Qwen/Qwen2.5-3B,0.4,16,32,16,True
+meta-llama/Llama-3.2-3B,0.4,6,18,12,True
+meta-llama/Meta-Llama-3-8B,0.4,10,20,10,True
+microsoft/phi-2,0.4,14,24,10,True
