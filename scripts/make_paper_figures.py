@@ -752,15 +752,13 @@ def fig3_both_change_competition():
             np.clip(sub["entity_wins"] + sub["entity_sem"], 0, 1),
             color=ENT_COLOR, alpha=BAND_ALPHA, linewidth=0)
 
-        visual_crossover  = find_crossover_interpolated(sub)
         sampled_crossover = find_crossover(sub)
 
-        if visual_crossover is not None:
-            ax.axvline(visual_crossover, linestyle=":",
+        if sampled_crossover is not None:
+            ax.axvline(sampled_crossover, linestyle=":",
                        color=DARK, linewidth=1.0)
-            if sampled_crossover is not None:
-                ax.text(visual_crossover + 0.25, 0.91,
-                        f"L{sampled_crossover}", fontsize=7.0)
+            ax.text(sampled_crossover + 0.25, 0.91,
+                    f"L{sampled_crossover}", fontsize=7.0)
 
         ax.set_title(SHORT[model_name], fontsize=8.8, fontweight="bold")
         ax.set_xlabel("Layer")
@@ -808,10 +806,10 @@ def fig4_subject_vs_last_patching():
     axes = axes.flatten()
 
     legend_handles = [
-        make_line_legend(SUBJ_COLOR, "o", "-",  "Subject-token patch"),
-        make_line_legend(LAST_COLOR, "s", "--", "Last-token patch"),
+        make_line_legend(SUBJ_COLOR, "o", "-",  "Entity-token patch"),
+        make_line_legend(LAST_COLOR, "s", "--", "Final-token patch"),
     ]
-    legend_labels = ["Subject-token patch", "Last-token patch"]
+    legend_labels = ["Entity-token patch", "Final-token patch"]
 
     for ax, model_name in zip(axes, MODEL_ORDER):
         sub = get_subject_curve(model_name)
